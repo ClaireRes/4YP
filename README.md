@@ -32,10 +32,15 @@ or can be changed in the main script for ```f_in```, ```f_in_gs``` and ```sequen
 The ```results``` directory created in this folder contains the following files after running:
 
 ```results_q1.csv``` = row-wise storing of relative volume sequence for right chest segment of each sample processed
+
 ```results_q2.csv``` = as above but for left chest segment
+
 ```results_q3.csv``` = as above but for right abdominal segment
+
 ```results_q4.csv``` = as above but for left abdominal segment
+
 ```results_names.csv``` = row-wise storing of sample names
+
 ```results_labels.csv``` = row-wise storing of sample class labels for classification use
 
 The ```split_samples``` binary parameter in main is used to select between extracting the first slice of ```slice_length``` from each sample (0), or extracting as many slices as possible of this length from each sample (1).
