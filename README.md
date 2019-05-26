@@ -1,5 +1,5 @@
 # 4th Year Project Repository
-Compiled program listing &amp; model training results for the 4th Year Project: Regional Respiratory Analysis With Non-invasive Imaging and 1D-CNNs
+Compiled program listing &amp; model training results for the 4th Year Project: Regional Respiratory Analysis With Non-invasive Imaging and 1D-CNNs. This repository is an appendix to the given report and is not intended as a standalone repo to reproduce the work within it. Actual data used in this report is omitted due to data sharing restrictions.
 
 ## Getting started
 You will require a version of Python 3.4 or above to run the Python scripts in this repo, and the Jupyter Notebook App with the Python 3 kernel to run the notebook files.
@@ -45,6 +45,22 @@ The ```results``` directory created in this folder contains the following files 
 
 The ```split_samples``` binary parameter in main is used to select between extracting the first slice of ```slice_length``` from each sample (0), or extracting as many slices as possible of this length from each sample (1).
 
+
+### Classifier Training Notebooks
+
+```cnn-asthma-classifier``` uses input data in form from data processed by ```extract_clf_inputs.py``` to train a 1D CNN binary classifier for paediatric asthma classification. Model implemented using TensorFlow.
+
+
+```cnn-COPD-classifier``` as above but for the training of a 1D CNN binary classifier for COPD classification.
+
+### Analysis of Optimal Classifier results
+
+Using predicted labels from the optimal classifiers found in the notebooks above, the ```Analyse_predictions``` notebook was used to carry out ROC-curve analysis and estimate probability density functions for each classifier's predictions on its associated test dataset.
+
+
+### Compiled training results
+
+The final round of training results and summary details of the data cohorts are compiled in the ```compiled_training_results``` spreadsheet. 
 
 
 
