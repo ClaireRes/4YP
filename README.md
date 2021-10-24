@@ -21,11 +21,11 @@ The array has dimensions ```[grid_size_rows x (3*grid_size_cols*num_frames)]```.
 
 ### Data processing scripts
 
-```visualise.py``` performs the reconstruction of the 3D surface data for a particular sample from its two CSV files, as well as normalisation, segmentation and volume curve extraction for this surface. The results are plotted as a dynamic reconstruction of the SLP recording. The entire recording can be reconstructed, or a subset of ```sequence_length``` frames from the first frame can be analysed. CSV file names and sequence length to analyses can be passed on command line using:
+```visualise.py``` performs the reconstruction of the 3D surface data for a particular sample from its two CSV files, as well as normalisation, segmentation and volume curve extraction for this surface. The results are plotted as a dynamic reconstruction of the SLP recording. The entire recording can be reconstructed, or a subset of ```sequence_length``` frames from the first frame can be analysed. CSV file names and sequence length to analyse can be passed on command line using:
 
-```visualise.py --file.csv --file_gs.csv --length ```
+```visualise.py --file <file.csv> --gridsize <file_gs.csv> --length <sequence_length>```
 
-or can be changed in the main script for ```f_in```, ```f_in_gs``` and ```sequence_length```.
+or can be changed in the main script directly by editing parameter values ```f_in```, ```f_in_gs``` and ```sequence_length```.
 
 ```extract_clf_inputs.py``` performs bulk processing using the same techniques as ```visualise.py``` of files of the same class into the format required for use in classifier training notebooks. The ```file_path``` set in main is the directory containing the .pn3 file and .CSV files for each sample to be processed.
 
